@@ -1,28 +1,25 @@
 GHDL = ghdl
 VIEWER = gtkwave
-
 SRCS = $(wildcard src/*.vhd)
 TBS  = $(wildcard tb/*.vhd)
 WAVE = wave.vcd
-
 TOP ?= $(shell basename $(firstword $(TBS)) .vhd)
-
 all: analyze elaborate run view
 
 analyze:
-	@echo "Analyzing files..."
+	@echo "Analyzing files:"
 	$(GHDL) -a $(SRCS) $(TBS)
 
 elaborate:
-	@echo "Elaborating $(TOP)..."
+	@echo "Elaborating $(TOP):"
 	$(GHDL) -e $(TOP)
 
 run:
-	@echo "Running simulation..."
+	@echo "Running simulation:"
 	$(GHDL) -r $(TOP) --vcd=$(WAVE) --stop-time=100ns
 
 view:
-	@echo "Opening GTKWave..."
+	@echo "Opening GTKWave:"
 	$(VIEWER) $(WAVE) &
 
 clean:
