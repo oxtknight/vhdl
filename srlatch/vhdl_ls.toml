@@ -1,5 +1,4 @@
 [libraries]
-# This tells the server to look at all VHDL files in the current folder
 work.files = [
     "*.vhd",
 ]
