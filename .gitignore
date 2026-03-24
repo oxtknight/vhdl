@@ -1,27 +1,15 @@
-# --- GHDL / Compiler Junk ---
-# These match any file ending in .cf or .o in ANY subfolder
+
 *.cf
 *.o
 work-obj93.cf
-
-# --- Simulation Binaries ---
-# This matches any file ending in _tb (like srlatch_tb, full_adder_tb, mux_tb)
 *_tb
-# Some people name them 'testbench', let's ignore that too
 *testbench
-
-# --- Waveform Data ---
-# This matches ANY waveform file, no matter what you name it
 *.vcd
 *.ghw
 *.fst
 wave.vcd
-
-# --- Vim / Editor Junk ---
 *.swp
 *.swo
 .netrwhist
 undo/
-
-# --- OS Junk ---
 .DS_Store
