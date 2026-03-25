@@ -1,4 +1,4 @@
-## VHDL repository:<br>
+## collection of simple hardware description modules repository:<br>
 This repository contains VHDL source codes and testbenches to ease the process of writing code without the need for repeating.<br>
 ### Content (so far)
 - SR Latch
